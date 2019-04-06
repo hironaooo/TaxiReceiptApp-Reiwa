@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-04-06 14:25:30
+  place: 
+  price: 1
+
+two:
+  date: 2019-04-06 14:25:30
+  place: 
+  price: 1
