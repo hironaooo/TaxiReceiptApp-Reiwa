@@ -20,7 +20,7 @@
                 <tr>
                   <td><%= receipt.name %></td>
                   <td>
-                    <%= link_to edit_receipt_path(receipt), target: "_blank" do %>
+                    <%= link_to edit_receipt_path(receipt) do %>
                       <img src="<%= receipt.image %>" width="100">
                     <% end %>
                   </td>
