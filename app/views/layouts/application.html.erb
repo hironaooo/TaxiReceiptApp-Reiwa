@@ -11,9 +11,13 @@
 
   <body>
    <%= render 'layouts/header' %>
+    <div style= "background-image: url(/assets/background.png);" class="wrapper cover-img">
    <div class="container p-5" >
     <%= yield %>
   </div>
+  </div>
+  <footer class="footer">
    <%= render 'layouts/footer' %>
+  </footer>
   </body>
 </html>

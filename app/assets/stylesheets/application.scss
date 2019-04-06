@@ -1,1 +1,23 @@
 @import "bootstrap";
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+  }
+
+  .cover-img {
+	height: 800px;
+	display: table;
+	width: 100%;
+	background-size: cover;
+}
+
+
+.footer,
+.push {
+    height: 50px;
+  }
