@@ -1,14 +1,24 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+    <div class="col-lg-6 offset-lg-2">
+        <div class="card" style="width: 42rem;">
+            <div class="card-body">
 
-<p>
-  <strong>Name:</strong>
-  <%= @receipt.name %>
-</p>
+                <h2 class='text-center border-bottom p-3 mb-3'><strong>RECEIPTS INFO</strong></h2>
 
-<p>
-  <strong>Image:</strong>
-  <img src="<%= @receipt.image %>" width="100">
-</p>
+                <p>
+                  <strong>Name:</strong>
+                  <%= @receipt.name %>
+                </p>
 
-<%= link_to 'Edit', edit_receipt_path(@receipt) %> |
-<%= link_to 'Back', receipts_path %>
+                <p>
+                  <strong>Image:</strong>
+                  <img src="<%= @receipt.image %>" width="100">
+                </p>
+
+                <%= link_to 'Edit', edit_receipt_path(@receipt), class: 'btn btn-outline-secondary'%> |
+                <%= link_to 'Back', receipts_path,class: 'btn btn-success btn-fluid' %>
+            </div>
+        </div>
+    </div>
+</div>

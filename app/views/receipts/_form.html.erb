@@ -11,18 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :image %>
     <%= form.file_field :image %>
 
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Upload Receipt", class: 'btn btn-success btn-fluid btn-block' %>
   </div>
 <% end %>

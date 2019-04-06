@@ -1,23 +1,31 @@
-<h1>Editing Receipt</h1>
-<%= form_with(model: @receipt, local: true) do |form| %>
+<div class="row">
+    <div class="col-lg-7 offset-lg-3">
+        <div class="card" style="width: 33rem;">
+            <div class="card-body">
+                <h3 class="card-title text-center"><strong>EDIT RECEIPT</strong></h3>
 
+                <%= form_with(model: @receipt, local: true) do |form| %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+                  <div class="field form-group">
+                    <%= form.label :name %>
+                    <%= form.text_field :name, class: 'form-control' %>
+                  </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    
+                  <div class="field form-group">
+                    <%= form.label :image %>
+                    
 
-  </div>
+                  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-<%= image_tag @receipt.image.to_s %>
+                  <div class="actions">
+                    <%= form.submit "Update Receipt", class: 'btn btn-success btn-fluid btn-block' %>
+                  </div>
+                <% end %>
+                <%= image_tag @receipt.image.to_s %>
+<br>
+                <%= link_to 'Back', receipts_path %>
 
-<%= link_to 'Show', @receipt %> |
-<%= link_to 'Back', receipts_path %>
+                </div>
+        </div>
+    </div>
+</div>
