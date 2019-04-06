@@ -19,7 +19,11 @@
               <% @receipts.each do |receipt| %>
                 <tr>
                   <td><%= receipt.name %></td>
-                  <td><img src="<%= receipt.image %>" width="100"></td>
+                  <td>
+                    <%= link_to edit_receipt_path(receipt), target: "_blank" do %>
+                      <img src="<%= receipt.image %>" width="100">
+                    <% end %>
+                  </td>
                   <td><%= receipt.details.first.date %></td>
                   <td><%= receipt.details.first.place %></td>
                   <td><%= receipt.details.first.price %></td>
