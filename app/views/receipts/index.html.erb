@@ -9,23 +9,25 @@
                 <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Image</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col">Date</th>
+                <th scope="col">Place</th>
+                <th scope="col">Price</th>
                 </tr>
             </thead>
 
             <tbody>
-            <% @receipts.each do |receipt| %>
-              <tr>
-                <td><%= receipt.name %></td>
-                <td><%= receipt.image %></td>
-                <td><%= link_to 'Show', receipt %></td>
-                <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
-                <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
-
+              <% @receipts.each do |receipt| %>
+                <tr>
+                  <td><%= receipt.name %></td>
+                  <td><img src="<%= receipt.image %>" width="100"></td>
+                  <td><%= receipt.details.first.date %></td>
+                  <td><%= receipt.details.first.place %></td>
+                  <td><%= receipt.details.first.price %></td>
+                  <td><%= link_to 'Show', receipt %></td>
+                  <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
+                  <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
             </tbody>
         </table>
 </div>
