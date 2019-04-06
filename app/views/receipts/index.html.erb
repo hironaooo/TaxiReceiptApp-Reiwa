@@ -2,7 +2,7 @@
 
 <div class="card">
     <div class="card-header">       
-        <h3> Receipts</h3>
+        <h3> RECEIPTS</h3>
     </div>
         <table class="table table-hover">
             <thead>
@@ -24,12 +24,21 @@
                       <img src="<%= receipt.image %>" width="100">
                     <% end %>
                   </td>
-                  <td><%= receipt.details.first.date %></td>
-                  <td><%= receipt.details.first.place %></td>
-                  <td><%= receipt.details.first.price %></td>
-                  <td><%= link_to 'Show', receipt %></td>
-                  <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
-                  <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <td><%#= receipt.details.first.date %></td>
+                  <td><%#= receipt.details.first.place %></td>
+                  <td><%#= receipt.details.first.price %></td>
+                  <td><%= link_to receipt_path(receipt), class: 'text-muted' do %>
+                  <i class="fas fa-eye"></i>
+                  <% end %>
+                  </td>
+                  <td><%= link_to edit_receipt_path(receipt) ,class: 'text-muted' do %>
+                   <i class="fas fa-edit"></i>
+                    <% end %>
+                  </td>
+                  <td><%= link_to receipt_path(receipt), method: :delete, data: { confirm: 'Are you sure?' } , class: "text-muted" do %>
+                  <i class="fas fa-trash-alt"></i>
+                  <% end %>
+                  </td>
                 </tr>
               <% end %>
             </tbody>
