@@ -19,6 +19,7 @@ class ReceiptsController < ApplicationController
 
   # GET /receipts/1/edit
   def edit
+    @receipt = Receipt.find(params[:id])
   end
 
   # POST /receipts

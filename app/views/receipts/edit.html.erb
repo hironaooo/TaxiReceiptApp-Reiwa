@@ -1,6 +1,23 @@
 <h1>Editing Receipt</h1>
+<%= form_with(model: @receipt, local: true) do |form| %>
 
-<%= render 'form', receipt: @receipt %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    
+
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<%= image_tag @receipt.image.to_s %>
 
 <%= link_to 'Show', @receipt %> |
 <%= link_to 'Back', receipts_path %>
